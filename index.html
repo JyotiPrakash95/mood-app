@@ -16,9 +16,9 @@
             <img id="img6" class="image" onclick="myFunction('img1')" src="images/Smileys.png" alt="Smileys" />
             <img id="img4" class="image" onclick="myFunction('img2')" src="images/Smiling.png" alt="Smiling" />
             <img id="img1" class="image" onclick="myFunction('img3')" src="images/Happy.png" alt="Happy" />
-            <img id="img2" class="image" onclick="myFunction('img4')" src="images/Sad.png" alt="Sad" />
-            <img id="img3" class="image" onclick="myFunction('img5')" src="images/Crying.png" alt="Crying" />
-            <img id="img5" class="image" onclick="myFunction('img6')" src="images/Steam.png" alt="Steam" />
+            <img id="img5" class="image" onclick="myFunction('img4')" src="images/Steam.png" alt="Steam" />
+            <img id="img2" class="image" onclick="myFunction('img5')" src="images/Sad.png" alt="Sad" />
+            <img id="img3" class="image" onclick="myFunction('img6')" src="images/Crying.png" alt="Crying" />
             <p id="demo"></p>
         </div>
     </header>
@@ -27,11 +27,11 @@
         function myFunction(imgId) {
             const str = [
                 "Great! You're awesome dear 😊",
-                "Keep smiling dear, you are doing well 👌",
+                "Keep smiling dear, you are doing good 👌",
                 "Your happiness matters to us, keep smiling 👍",
+                "Hey! Please be calm for a second, you are not like this 🙂",
                 "It's okay! You will be fine. All you need to do is smile 🫠",
-                "Please do not waste your energy on this.<br>You are good enough to change your world! 🙂",
-                "Hey! Please be calm for a second, you are not like this 🙂"
+                "Please do not waste your energy on this.<br>You are good enough to change your world! 🙂"
             ];
             //This line is for extracting the index no. from the image ID by the slice method and then it will be converted into a no. by parseInt (-1) used to correct the index of the image no.
             const index = parseInt(imgId.slice(3)) - 1;
