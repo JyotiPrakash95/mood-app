@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Change app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="content-container">
+            <h1>Wanna try to change your mood </h1><br>
+            <img id="img1" class="image" onclick="myFunction('img1')" src="images/Happy.png" alt="Happy" />
+            <img id="img2" class="image" onclick="myFunction('img2')" src="images/Sad.png" alt="Sad" />
+            <img id="img3" class="image" onclick="myFunction('img3')" src="images/Crying.png" alt="Crying" />
+            <img id="img4" class="image" onclick="myFunction('img4')" src="images/Smiling.png" alt="Smiling" />
+            <img id="img5" class="image" onclick="myFunction('img5')" src="images/Steam.png" alt="Steam" />
+            <img id="img6" class="image" onclick="myFunction('img6')" src="images/Smileys.png" alt="Smileys" />
+            <p id="demo"></p>
+        </div>
+    </header>
+
+    <script>
+        function myFunction(imgId) {
+            const str = [
+                "Your happiness matters to us, keep smiling 👍",
+                "It's okay! You will be fine. All you need to do is smile 🫠",
+                "Please do not waste your energy on this.<br>You are good enough to change your world! 🙂",
+                "Keep smiling dear, you are doing good 👌",
+                "Hey! Please be calm for a second, you are not like this 🙂",
+                "Great! You're awesome dear 😊"
+            ];
+            // this line for extracting the index no. from the image ID by the the slice mathod and then it will be convert into a no. by parseInt (-1) used for the correcting the index of the image no.
+            const index = parseInt(imgId.slice(3)) - 1;
+            // pass image index to str array
+            const message = str[index] || "You are Awesome";
+            document.getElementById("demo").innerHTML = message;
+        }
+    </script>
+</body>
+
+</html>
